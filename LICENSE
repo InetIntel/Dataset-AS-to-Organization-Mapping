@@ -1,0 +1,52 @@
+ACCEPTABLE USE AGREEMENT
+
+The following terms comprise the Acceptable Use Policy and Data License
+Agreement for this dataset (the “Public Agreement”) made available by the
+Georgia Institute of Technology ("Georgia Tech").
+
+LICENSE
+
+Authorization to access the data grants You a limited, non-exclusive,
+non-transferable, non-assignable, and terminable license to copy, modify, and
+use the data in accordance with this Public Agreement. No license is granted for
+any other purpose and there are no implied licenses in this Agreement. Nothing
+in this License is intended to limit any rights You may have arising from fair
+use or due to other limitations on Georgia Tech's and Georgia Tech Research
+Corporation's exclusive rights under copyright law or other applicable laws.
+
+Georgia Tech has the authority and reserves the right, in its sole discretion,
+to discontinue further access and use to anyone who violates this AUA.
+
+If You create a publication (including web pages, papers published by a third
+party, and publicly available presentations) using data from this dataset, You
+must cite the data as follows:
+
+    Z. Chen, Z. Bischof, C. Testart, A. Dainotti, "AS to Organization Mapping",
+    Internet Intelligence Lab at Georgia Tech, [dates used],
+    https://github.com/InetIntel/Dataset-AS-to-Organization-Mapping 
+
+You are also required to report your publication to the Internet Intelligence
+Lab (inetintel@cc.gatech.edu) with a copy of (or a link to) the publication. We
+use this information in reports to our funding agencies.
+
+DISCLAIMER OF WARRANTIES
+
+THE INTERNET INTELLIGENCE LAB AT GEORGIA TECH USES ITS BEST EFFORTS TO PROVIDE
+DATA IN ACCORDANCE WITH ETHICAL PRINCIPLES AND SCIENTIFIC INTEGRITY. HOWEVER,
+THE DATA PROVIDED HEREIN IS ON AN “AS IS” BASIS. NEITHER OUR LAB, ITS
+RESEARCHERS, RESEARCH PARTNERS, LICENSORS, AND DATA PROVIDERS, NOR GEORGIA TECH
+AND THE GEORGIA TECH RESEARCH CORPORATION AND ITS TRUSTEES, OFFICERS, EMPLOYEES,
+AND AGENTS MAKE ANY WARRANTY, EITHER IMPLIED OR EXPRESS, OF MERCHANTABILITY OR
+FITNESS FOR A PARTICULAR PURPOSE, INCLUDING, BUT NOT LIMITED TO, THE ACCURACY,
+TIMELINESS, COMPLETENESS, RELIABILITY, OR AVAILABILITY OF DATA, APPLICATIONS, OR
+SERVICES ACCESSIBLE THROUGH OR MADE AVAILABLE BY OUR LAB.
+
+LIMITATION OF LIABILITY
+
+TO THE EXTENT ALLOWED BY LAW, IN NO EVENT SHALL THE INTERNET INTELLIGENCE LAB AT
+GEORGIA TECH AND GEORGIA TECH OR THE GEORGIA TECH RESEARCH CORPORATION BE LIABLE
+TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL
+OR PUNITIVE DAMAGES, ARISING FROM YOUR USE OF THE DATA.
+
+If You have any questions about the data or about this Public Agreement, please
+email inetintel@cc.gatech.edu .

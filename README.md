@@ -1,6 +1,10 @@
-# Improving-Inference-of-Sibling-ASes
+# Dataset: AS to Organization mapping
 
-This repo contains the generated dataset from the paper *Improving the Inference of Sibling Autonomous Systems* accepted by Passive and Active Measurement Conference (PAM) 2023. This dataset won the PAM 2023 Best Community Artifact Award. Please create issues to report any inaccuracy in the dataset!
+This repo contains historical and current versions of our AS to Organization mapping. 
+
+The methodology we use is described in the paper *Improving the Inference of Sibling Autonomous Systems* published at the Passive and Active Measurement Conference (PAM) 2023. This dataset won the PAM 2023 Best Community Artifact Award. 
+
+Please create issues to report any inaccuracy in the dataset!
 
 The dataset is organized per ASN and each ASN is associated with 8 columns: 
 - **Status** (matched / unmatched (orphan) / no hint of error) 
