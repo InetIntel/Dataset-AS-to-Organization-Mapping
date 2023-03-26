@@ -8,7 +8,8 @@ Please create issues to report any inaccuracy in the dataset!
 
 The dataset is organized per ASN and each ASN is associated with 8 columns: 
 - **Status** (matched / unmatched (orphan) / no hint of error) 
-- **Reference Orgs** (the list of our output related organizations) 
+- **Reference Orgs** (the list of dictionaries of our output related organizations) 
+There are three main types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx"}, or {"source": "CA2O", "url": "http://api.asrank.caida.org/v2/restful/organizations/xxx"}. For the third type, when CA2O makes a different inference other than the Whois organization, we provide the CAIDA ASRank restful api to the inferred organization. If the CA2O does not have inferred organization, we provide the url to the ASN object, i.e., {"source": "CA2O", "url": "http://api.asrank.caida.org/v2/restful/asns/xxx"}.
 - **Sibling ASNs** (our inferred sibling ASNs) 
 - **PDB.Org** (PDB-mapped organization, from PDB dataset)
 - **Name** (AS-name in Whois, from Whois dataset)
