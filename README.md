@@ -6,7 +6,7 @@ The methodology we use is described in the paper *Improving the Inference of Sib
 
 Please create issues to report any inaccuracy in the dataset!
 
-The dataset is organized per ASN and each ASN is associated with 8 columns: 
+The dataset is organized per ASN and each ASN is associated with 9 columns: 
 - **Status** (matched / unmatched (orphan) / no hint of error) 
 - **Reference Orgs** (the list of dictionaries of our output related organizations) 
 
