@@ -7,7 +7,7 @@ The methodology we use is described in the paper *Improving the Inference of Sib
 Please create issues to report any inaccuracy in the dataset!
 
 The dataset is organized per ASN and each ASN is associated with the following columns: 
-- **Status** (matched / unmatched (orphan) / no hint of error) 
+- **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
 - **Reference Orgs** (the list of dictionaries of our output related organizations) 
 
   - There are three main types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}, and {"source": "CA2O", "url": "http://api.asrank.caida.org/v2/restful/organizations/xxx"}. For the third type, when CA2O makes a different inference other than the Whois organization, we provide the link to CAIDA ASRank restful API of the inferred organization. When CA2O does not have an inferred organization, we provide the link to CAIDA ASRank restful API of the ASN object, i.e., {"source": "CA2O", "url": "http://api.asrank.caida.org/v2/restful/asns/xxx"}.
