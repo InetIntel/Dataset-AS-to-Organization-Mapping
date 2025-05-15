@@ -1,4 +1,4 @@
-# Dataset: AS to Organization mapping
+# Dataset: AS to Organization mapping (IIL-AS2Org)
 
 This repo contains historical and current versions of our AS to Organization mapping datasets. 
 
