@@ -6,6 +6,23 @@ The methodology we use is described in the paper *Improving the Inference of Sib
 
 Please create issues to report any inaccuracy in the dataset!
 
+**From 2025-06, we use an updated dataset format and generation methodology. (referred to as ii.as-org.v02)**
+
+## New format and methodology
+The dataset is organized per **ASN** and each ASN is associated with the following columns: 
+- **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
+- **Reference Orgs** (the list of dictionaries of our output related organizations) 
+
+  - There are ONLY two types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}. Our updated methodology does not rely on CAIDA AS2Org anymore. We generate Whois AS2Org based on bulk whois data and conduct pool detection and the following steps based on it.
+
+- **Sibling ASNs** (our inferred sibling ASNs)
+- **Whois.org** (Whois-mapped organization, from bulk Whois files)
+- **PDB.org** (PDB-mapped organization, from PDB dataset)
+- **Name** (AS-name in Whois, from Whois dataset)
+- **Descr** (Description field in Whois, from Whois dataset)
+- **Website** (Website URL of the ASN, from PDB or BGP.tools)
+
+## Old format and methodology
 The dataset is organized per ASN and each ASN is associated with the following columns: 
 - **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
 - **Reference Orgs** (the list of dictionaries of our output related organizations) 
