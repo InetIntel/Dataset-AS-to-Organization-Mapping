@@ -8,6 +8,8 @@ Please create issues to report any inaccuracy in the dataset!
 
 **From 2025-06, we use an updated dataset format and generation methodology. (referred to as ii.as-org.v02)**
 
+[![DOI](https://zenodo.org/badge/563047649.svg)](https://doi.org/10.5281/zenodo.18340700)
+
 ## New format and methodology
 The dataset is organized per **ASN** and each ASN is associated with the following columns: 
 - **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
@@ -37,6 +39,39 @@ The dataset is organized per ASN and each ASN is associated with the following c
 - **Website** (Website URL of the ASN, from PDB or BGP.tools)
 - **Comparison with CA2O** (Agree / Disagree)
 - **Comparison with PDB** (Agree / Disagree)
+
+## Citation
+
+If you use this dataset, please cite the Zenodo **concept DOI** (all versions):
+https://doi.org/10.5281/zenodo.18340700
+
+```bibtex
+@software{chen_as2org_concept,
+  author       = {Chen, Zhiyi and
+                  Bischof, Zachary and
+                  Testart, Cecilia and
+                  Dainotti, Alberto},
+  title        = {AS to Organization Mapping (IIL-AS2Org)},
+  month        = jan,
+  year         = 2026,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.18340700},
+  url          = {https://doi.org/10.5281/zenodo.18340700},
+  note         = {Concept DOI (all versions). For a specific snapshot/release, please cite the corresponding Zenodo version DOI.},
+}
+```
+
+If you find the methodology or framework described in our paper useful, please also cite:
+```
+@inproceedings{chen2023improving,
+  title        = {Improving the Inference of Sibling Autonomous Systems},
+  author       = {Chen, Zhiyi and Bischof, Zachary S and Testart, Cecilia and Dainotti, Alberto},
+  booktitle    = {International Conference on Passive and Active Network Measurement},
+  pages        = {345--372},
+  year         = {2023},
+  organization = {Springer}
+}
+```
 
 # LICENSE
 
