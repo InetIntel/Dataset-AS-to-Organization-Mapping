@@ -73,7 +73,8 @@ If you find the methodology or framework described in our paper useful, please a
 }
 ```
 
-# LICENSE
+## LICENSE / Acceptable Use Agreement (AUA)
 
-See the [LICENSE](LICENSE) file for more info.
+The dataset is publicly accessible in this GitHub repository. However, any access and use of the data is subject to the Acceptable Use Agreement (AUA) and license terms provided by Georgia Tech.
 
+See the [LICENSE](LICENSE) file for details.
