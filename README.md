@@ -10,7 +10,7 @@ This dataset won the PAM 2023 Best Community Artifact Award.
 
 Please create issues to report any inaccuracy in the dataset!
 
-**From 2025-06, we use an updated dataset format and generation methodology. (referred to as ii.as-org.v02)**
+**Updates:** From 2025-06 onward, we use an updated dataset format and generation methodology (IIL.AS2Org.v02). Our updated pipeline no longer relies on CAIDA AS2Org; instead, it derives organization mappings from bulk WHOIS data and builds subsequent inference steps on top of that.
 
 [![DOI](https://zenodo.org/badge/563047649.svg)](https://doi.org/10.5281/zenodo.18340700)
 
@@ -19,7 +19,7 @@ The dataset is organized per **ASN** and each ASN is associated with the followi
 - **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
 - **Reference Orgs** (the list of dictionaries of our output related organizations) 
 
-  - There are ONLY two types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}. Our updated methodology does not rely on CAIDA AS2Org anymore. We generate Whois AS2Org based on bulk whois data and conduct pool detection and the following steps based on it.
+  - There are ONLY two types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}. 
 
 - **Sibling ASNs** (our inferred sibling ASNs)
 - **Whois.org** (Whois-mapped organization, from bulk Whois files)
