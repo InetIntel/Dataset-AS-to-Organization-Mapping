@@ -2,7 +2,11 @@
 
 This repo contains historical and current versions of our AS to Organization mapping datasets. 
 
-The methodology we use is described in the paper *Improving the Inference of Sibling Autonomous Systems* published at the [Passive and Active Measurement Conference (PAM) 2023](https://pam2023.networks.imdea.org/program/). This dataset won the PAM 2023 Best Community Artifact Award. 
+The methodology we use is described in the paper *Improving the Inference of Sibling Autonomous Systems* (PAM 2023).
+- [Publisher page (Springer)](https://link.springer.com/chapter/10.1007/978-3-031-28486-1_15)
+- [Author accepted manuscript (PDF)](https://zhiyichenGT.github.io/Improving%20the%20Inference%20of%20Sibling%20Autonomous%20Systems%20(Accepted%20Manuscript).pdf)
+
+This dataset won the PAM 2023 Best Community Artifact Award.
 
 Please create issues to report any inaccuracy in the dataset!
 
