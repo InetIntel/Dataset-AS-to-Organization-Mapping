@@ -8,29 +8,35 @@ The methodology we use is described in the paper *Improving the Inference of Sib
 
 This dataset won the PAM 2023 Best Community Artifact Award.
 
-Please create issues to report any inaccuracy in the dataset!
-
-**Updates:** From 2025-06 onward, we use an updated dataset format and generation methodology (IIL.AS2Org.v02). Our updated pipeline no longer relies on CAIDA AS2Org; instead, it derives organization mappings from bulk WHOIS data and builds subsequent inference steps on top of that.
+Please open an issue to report any inaccuracies in the dataset (include ASN, month, and evidence)!
 
 [![DOI](https://zenodo.org/badge/563047649.svg)](https://doi.org/10.5281/zenodo.18340700)
 
-## New format and methodology
-The dataset is organized per **ASN** and each ASN is associated with the following columns: 
-- **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
-- **Reference Orgs** (the list of dictionaries of our output related organizations) 
+## Quick start
 
-  - There are ONLY two types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}. 
+- Latest snapshot: see the `data/` directory for monthly JSON snapshots.
+- Recommended format for new users: `v1.1 + ff002` (no CAIDA-dependent fields).
+- File naming: `IIL-AS2Org.v{method}.ff{format}.YYYY-MM.json`
 
-- **Sibling ASNs** (our inferred sibling ASNs)
-- **Whois.org** (Whois-mapped organization, from bulk Whois files)
-- **PDB.org** (PDB-mapped organization, from PDB dataset)
-- **Name** (AS-name in Whois, from Whois dataset)
-- **Descr** (Description field in Whois, from Whois dataset)
-- **Website** (Website URL of the ASN, from PDB or BGP.tools)
+## Methodology versions
 
-## Old format and methodology
+### Version 1 (v1)
+
+We refer to the methodology described in our PAM 2023 paper as version 1.
+
+### Version 1.1 (v1.1)
+
+Version 1.1 is a minor update to v1: we replace the CAIDA AS Classification (CA2O) signal used in v1 with organization information derived from bulk Whois data.
+As shown in our PAM'23 paper, CAIDA AS Classification differs from Whois for only a small fraction of ASes (~3% in APNIC and <1% in other RIRs), so we consider v1.1 a minor revision of v1.
+
+## File Formats
+
+### File Format 1 (ff001)
+
+We refer the file format described in our PAM 2023 paper as ff001, as follows: 
+
 The dataset is organized per ASN and each ASN is associated with the following columns: 
-- **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
+- **Status** (matched / unmatched (orphan) / no hint of error / manual) 
 - **Reference Orgs** (the list of dictionaries of our output related organizations) 
 
   - There are three main types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}, and {"source": "CA2O", "url": "http://api.asrank.caida.org/v2/restful/organizations/xxx"}. For the third type, when CA2O makes a different inference other than the Whois organization, we provide the link to CAIDA ASRank restful API of the inferred organization. When CA2O does not have an inferred organization, we provide the link to CAIDA ASRank restful API of the ASN object, i.e., {"source": "CA2O", "url": "http://api.asrank.caida.org/v2/restful/asns/xxx"}.
@@ -43,6 +49,41 @@ The dataset is organized per ASN and each ASN is associated with the following c
 - **Website** (Website URL of the ASN, from PDB or BGP.tools)
 - **Comparison with CA2O** (Agree / Disagree)
 - **Comparison with PDB** (Agree / Disagree)
+
+### File Format 2 (ff002)
+
+This file format does not contain any field related to CAIDA AS Classification. The dataset is organized per **ASN** and each ASN is associated with the following columns: 
+- **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
+- **Reference Orgs** (the list of dictionaries of our output related organizations) 
+
+  - There are ONLY two types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}. 
+
+- **Sibling ASNs** (our inferred sibling ASNs)
+- **Whois.org** (Whois-mapped organization, from bulk Whois files)
+- **PDB.org** (PDB-mapped organization, from PDB dataset)
+- **Name** (AS-name in Whois, from Whois dataset)
+- **Descr** (Description field in Whois, from Whois dataset)
+- **Website** (Website URL of the ASN, from PDB or BGP.tools)
+
+## Dataset naming
+
+We name our dataset based on the methodology version and file format version. For example, IIL-AS2Org.v1.ff001.2022-10.json means the dataset is generated using methodology version 1 in format 1. YYYY-MM indicates a monthly snapshot for that month.
+
+## Dataset structure
+
+Our dataset is a json file with two meta keys: "metadata" and "data". 
+```json
+{
+  "metadata": {
+    "version": "1",
+    "file format": "001",
+    "method/format description": "https://github.com/InetIntel/Dataset-AS-to-Organization-Mapping",
+  },
+  "data": {
+    "AS001": {...}
+  }
+}
+```
 
 ## Citation
 
@@ -61,7 +102,7 @@ https://doi.org/10.5281/zenodo.18340700
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.18340700},
   url          = {https://doi.org/10.5281/zenodo.18340700},
-  note         = {Concept DOI (all versions). For a specific snapshot/release, please cite the corresponding Zenodo version DOI.},
+  note         = {Concept DOI (all versions). For a specific snapshot/release, please cite the corresponding Zenodo *version DOI*.},
 }
 ```
 
