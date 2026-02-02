@@ -75,9 +75,10 @@ Our dataset is a json file with two meta keys: "metadata" and "data".
 ```json
 {
   "metadata": {
-    "version": "1",
-    "file format": "001",
-    "method/format description": "https://github.com/InetIntel/Dataset-AS-to-Organization-Mapping",
+    "version": "v1",
+    "file_format": "ff001",
+    "snapshot_month": "2022-10",
+    "documentation_url": "https://github.com/InetIntel/Dataset-AS-to-Organization-Mapping",
   },
   "data": {
     "AS001": {...}
