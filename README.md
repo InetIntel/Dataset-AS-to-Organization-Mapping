@@ -20,9 +20,9 @@ Please open an issue to report any inaccuracies in the dataset (include ASN, mon
 
 ## Methodology versions
 
-### Version 1 (v1)
+### Version 1.0 (v1.0)
 
-We refer to the methodology described in our PAM 2023 paper as version 1.
+We refer to the methodology described in our PAM 2023 paper as version 1.0.
 
 ### Version 1.1 (v1.1)
 
@@ -67,7 +67,7 @@ This file format does not contain any field related to CAIDA AS Classification. 
 
 ## Dataset naming
 
-We name our dataset based on the methodology version and file format version. For example, IIL-AS2Org.v1.ff001.2022-10.json means the dataset is generated using methodology version 1 in format 1. YYYY-MM indicates a monthly snapshot for that month.
+We name our dataset based on the methodology version and file format version. For example, IIL-AS2Org.v1.0.ff001.2022-10.json means the dataset is generated using methodology version 1.0 in format 1. YYYY-MM indicates a monthly snapshot for that month.
 
 ## Dataset structure
 
@@ -75,7 +75,7 @@ Our dataset is a json file with two meta keys: "metadata" and "data".
 ```json
 {
   "metadata": {
-    "version": "v1",
+    "version": "v1.0",
     "file_format": "ff001",
     "snapshot_month": "2022-10",
     "documentation_url": "https://github.com/InetIntel/Dataset-AS-to-Organization-Mapping",
