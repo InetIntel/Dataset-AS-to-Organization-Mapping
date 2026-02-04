@@ -50,6 +50,8 @@ The dataset is organized per ASN and each ASN is associated with the following c
 - **Comparison with CA2O** (Agree / Disagree)
 - **Comparison with PDB** (Agree / Disagree)
 
+We initially generated the datasets in ff001 (using method v1.0) for snapshots before 2025-04. To ensure format consistency across all snapshots, we convert these ff001 files to ff002. However, because bulk WHOIS data are only available starting from the following dates—arin (2023-03-28), jpnic (2023-03-28), ripe (2023-03-28), apnic (2023-04-01), afrinic (2023-04-01), and lacnic (2024-07-19)—we use the nearest available WHOIS snapshot to populate the Whois.org field for earlier datasets. For ASes that do not appear in the nearest WHOIS snapshot, we set this field to "Unknown".
+
 ### File Format 2 (ff002)
 
 This file format does not contain any field related to CAIDA AS Classification. The dataset is organized per **ASN** and each ASN is associated with the following columns: 
