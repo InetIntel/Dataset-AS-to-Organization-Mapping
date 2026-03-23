@@ -106,8 +106,8 @@ Methodology version 1.2 includes thousands of CERNET ASNs as sibling ASNs, makin
   }
 }
 ```
-•	organizations: We create artificial orgIDs for each organization. These IDs have no real-world meaning and are used only within the dataset. Reference Names contains all relevant names associated with the organization that we found in Whois and PeeringDB.
-•	as2org: We keep the same fields included in ff002.
+-	organizations: We create artificial orgIDs for each organization. These IDs have no real-world meaning and are used only within the dataset. Reference Names contains all relevant names associated with the organization that we found in Whois and PeeringDB.
+-	as2org: We keep the same fields included in ff002.
 
 ## Dataset naming
 
