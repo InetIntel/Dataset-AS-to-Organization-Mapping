@@ -32,9 +32,12 @@ As shown in our PAM'23 paper, CAIDA AS Classification differs from Whois for onl
 ### Version 1.2 (v1.2)
 
 Version 1.2 is an update based on v1.1 with the following changes:
-	1.	Added approximately 4,200 ASNs owned by the China Education and Research Network (CERNET) and its project, the Future Internet Technology Infrastructure (FITI), as sibling ASNs. These ASNs exist only in as-block objects (i.e., they are delegated) and do not have corresponding aut-num objects in Whois. Although similar cases also exist in the APNIC region and its NIRs (e.g., JPNIC and CNNIC), we make this exception only for CERNET. The reasons are twofold: (1) almost all of these 4,200 CERNET ASNs are routed, whereas such ASNs in RIRs/NIRs are rarely routed; and (2) these CERNET ASNs are actually used by CERNET and its project, making them true sibling ASNs. In contrast, similar ASNs held by RIRs/NIRs are typically only temporarily under their control, are not used by them, and have not yet been officially assigned to other organizations. Therefore, those ASNs should not be treated as siblings.
-	2.	Updated the manual correction list used for sibling identification. Siblings identified through this list are labeled as Manual in the status field.
-	3.	Fixed a bug so that ASNs assigned by JPNIC are now correctly included in the dataset.
+
+1. Added approximately 4,200 ASNs owned by the China Education and Research Network (CERNET) and its project, the Future Internet Technology Infrastructure (FITI), as sibling ASNs. These ASNs exist only in as-block objects (i.e., they are delegated) and do not have corresponding aut-num objects in Whois. Although similar cases also exist in the APNIC region and its NIRs (e.g., JPNIC and CNNIC), we make this exception only for CERNET. The reasons are twofold: (1) almost all of these 4,200 CERNET ASNs are routed, whereas such ASNs in RIRs/NIRs are rarely routed; and (2) these CERNET ASNs are actually used by CERNET and its project, making them true sibling ASNs. In contrast, similar ASNs held by RIRs/NIRs are typically only temporarily under their control, are not used by them, and have not yet been officially assigned to other organizations. Therefore, those ASNs should not be treated as siblings.
+
+2. Updated the manual correction list used for sibling identification. Siblings identified through this list are labeled as Manual in the status field.
+
+3. Fixed a bug so that ASNs assigned by JPNIC are now correctly included in the dataset.
 
 ## File Formats
 
