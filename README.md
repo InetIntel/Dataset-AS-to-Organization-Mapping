@@ -15,7 +15,7 @@ Please open an issue to report any inaccuracies in the dataset (include ASN, mon
 ## Quick start
 
 - Latest snapshot: see the `data/` directory for monthly JSON snapshots.
-- Recommended format for new users: `v1.1 + ff002` (no CAIDA-dependent fields).
+- Recommended format for new users: `v1.2 + ff003` (no CAIDA-dependent fields).
 - File naming: `IIL-AS2Org.v{method}.ff{format}.YYYY-MM.json`
 
 ## Methodology versions
@@ -26,8 +26,15 @@ We refer to the methodology described in our PAM 2023 paper as version 1.0.
 
 ### Version 1.1 (v1.1)
 
-Version 1.1 is a minor update to v1: we replace the CAIDA AS Classification (CA2O) signal used in v1 with organization information derived from bulk Whois data.
+Version 1.1 is a minor update to v1: we replaced the CAIDA AS Classification (CA2O) signal used in v1 with organization information derived from bulk Whois data.
 As shown in our PAM'23 paper, CAIDA AS Classification differs from Whois for only a small fraction of ASes (~3% in APNIC and <1% in other RIRs), so we consider v1.1 a minor revision of v1.
+
+### Version 1.2 (v1.2)
+
+Version 1.2 is an update based on v1.1 with the following changes:
+	1.	Added approximately 4,200 ASNs owned by the China Education and Research Network (CERNET) and its project, the Future Internet Technology Infrastructure (FITI), as sibling ASNs. These ASNs exist only in as-block objects (i.e., they are delegated) and do not have corresponding aut-num objects in Whois. Although similar cases also exist in the APNIC region and its NIRs (e.g., JPNIC and CNNIC), we make this exception only for CERNET. The reasons are twofold: (1) almost all of these 4,200 CERNET ASNs are routed, whereas such ASNs in RIRs/NIRs are rarely routed; and (2) these CERNET ASNs are actually used by CERNET and its project, making them true sibling ASNs. In contrast, similar ASNs held by RIRs/NIRs are typically only temporarily under their control, are not used by them, and have not yet been officially assigned to other organizations. Therefore, those ASNs should not be treated as siblings.
+	2.	Updated the manual correction list used for sibling identification. Siblings identified through this list are labeled as Manual in the status field.
+	3.	Fixed a bug so that ASNs assigned by JPNIC are now correctly included in the dataset.
 
 ## File Formats
 
@@ -67,26 +74,41 @@ This file format does not contain any field related to CAIDA AS Classification. 
 - **Descr** (Description field in Whois, from Whois dataset)
 - **Website** (Website URL of the ASN, from PDB or BGP.tools)
 
-## Dataset naming
+### File Format 3 (ff003)
 
-We name our dataset based on the methodology version and file format version. For example, IIL-AS2Org.v1.0.ff001.2022-10.json means the dataset is generated using methodology version 1.0 in format 1. YYYY-MM indicates a monthly snapshot for that month.
-
-## Dataset structure
-
-Our dataset is a json file with two meta keys: "metadata" and "data". 
+Methodology version 1.2 includes thousands of CERNET ASNs as sibling ASNs, making it inefficient to store the full Sibling ASNs field for every AS entry as in ff001 and ff002. To avoid this redundancy, we designed ff003 to separate organization-level information from ASN-level mappings.
 ```json
 {
   "metadata": {
-    "version": "v1.0",
-    "file_format": "ff001",
-    "snapshot_month": "2022-10",
+    "version": "v1.2",
+    "file_format": "ff003",
+    "snapshot_month": "2026-01",
     "documentation_url": "https://github.com/InetIntel/Dataset-AS-to-Organization-Mapping",
   },
-  "data": {
-    "AS1": {...}
+  "organizations": [
+    {"orgID": "xxx", "Reference Names": ["xxx"]},
+    ...
+  ],
+  "as2org": {
+    "AS1": {
+      "OrgID": "xxx",
+      "Status": "xxx",
+      "Note": "xxx",
+      "Whois.Org": "xxx",
+      "PDB:Org": "xxx",
+      "Name": "xxx",
+      "Descr": "xxx",
+      "Website": "xxx"
+    }
   }
 }
 ```
+•	organizations: We create artificial orgIDs for each organization. These IDs have no real-world meaning and are used only within the dataset. Reference Names contains all relevant names associated with the organization that we found in Whois and PeeringDB.
+•	as2org: We keep the same fields included in ff002.
+
+## Dataset naming
+
+We name our dataset based on the methodology version and file format version. For example, IIL-AS2Org.v1.0.ff001.2022-10.json means the dataset is generated using methodology version 1.0 in format 1. YYYY-MM indicates a monthly snapshot for that month.
 
 ## Citation
 
