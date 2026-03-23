@@ -66,10 +66,7 @@ We initially generated the datasets in ff001 (using method v1.0) for snapshots b
 
 This file format does not contain any field related to CAIDA AS Classification. The dataset is organized per **ASN** and each ASN is associated with the following columns: 
 - **Status** (matched / unmatched (orphan) / no hint of error / Manual) 
-- **Reference Orgs** (the list of dictionaries of our output related organizations) 
-
-  - There are ONLY two types of dictionaries: {"source": "Whois", "name": "xxx"}, {"source": "PDB", "name": "xxx", 'org_id': "xxx"}. 
-
+- **Reference Orgs** ("Whois: xxx"/"PDB: xxx"/"xxx")
 - **Sibling ASNs** (our inferred sibling ASNs)
 - **Whois.org** (Whois-mapped organization, from bulk Whois files)
 - **PDB.org** (PDB-mapped organization, from PDB dataset)
@@ -106,7 +103,7 @@ Methodology version 1.2 includes thousands of CERNET ASNs as sibling ASNs, makin
   }
 }
 ```
--	organizations: We create artificial orgIDs for each organization. These IDs have no real-world meaning and are used only within the dataset. Reference Names contains all relevant names associated with the organization that we found in Whois and PeeringDB.
+-	organizations: We create artificial orgIDs for each organization. These IDs have no real-world meaning and are used only within the dataset. Reference Names contains all relevant names associated with the organization that we found in Whois and PeeringDB (we omit the data source in ff003).
 -	as2org: We keep the same fields included in ff002.
 
 ## Dataset naming
